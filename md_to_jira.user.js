@@ -1,7 +1,6 @@
 // ==UserScript==
 // @name         MD_to_JIRA
-// @namespace    http://tampermonkey.net/
-// @namespace   https://github.com/sindbach/
+// @namespace    https://github.com/sindbach/
 // @version      0.1
 // @description  Converts MD to JIRA format
 // @author       Wan Bachtiar
