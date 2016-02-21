@@ -4,7 +4,8 @@
 // @version      0.1
 // @description  Converts MD to JIRA format
 // @author       Wan Bachtiar
-// @updateURL     https://raw.githubusercontent.com/sindbach/md_to_jira/master/md_to_jira.user.js
+// @include      https?://jira.*
+// @updateURL    https://raw.githubusercontent.com/sindbach/md_to_jira/master/md_to_jira.user.js
 // ==/UserScript==
 /* jshint -W097 */
 'use strict';
