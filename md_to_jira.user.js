@@ -16,16 +16,19 @@ if (document.getElementById(textid)==null){textid = "description";}
 if (document.getElementById(textid)==null){console.log("No text to convert"); return;}
 var text = document.getElementById(textid).value;
 
-/* code block */
+/* code block: find triple backticks */
 var result = text.replace(/```(.+)/gi, "{code:$1}").replace(/```/gi, "{code}");
 
-/* emphasis */
+/* emphasis: find word(s) surrounded by backticks */
 result = result.replace(/`([^`]+)`/gi, "{{\$1}}");
 
-/* links */
+/* links: find matching [title](url) */
 result = result.replace(/\[([^\]]+)\]\(([^\)]+[^\s+]+)\)/gi, "[$1|$2]");
 
-/* bold */
+/* bold: find word(s) is surrounded by double "_" or "*" */
 result = result.replace(/(?:\_\_|\*\*)(\w+)(?:\_\_|\*\*)/gi, "*$1*");
+
+/* quote: find line that has ">" at the beginning, or prefix by a new line */
+result = result.replace(/^\>|(\n)\>/gi, "$1bq. ");
 
 document.getElementById(textid).value = result;
