@@ -12,8 +12,8 @@
 
 /* Grab the text-area for adding comment edit. */
 var textid = "comment";
-if (document.getElementById(textid)==null){textid = "description";}
-if (document.getElementById(textid)==null){console.log("No text to convert"); return;}
+if (document.getElementById(textid)===null){textid = "description";}
+if (document.getElementById(textid)===null){return;}
 var text = document.getElementById(textid).value;
 
 /* code block: find triple backticks */
