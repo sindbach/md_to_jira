@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         MD_to_JIRA
-// @namespace    http://tampermonkey.net/
+// @namespace    http://github.com/sindbach
 // @version      0.2
 // @description  Converts MD to JIRA format
 // @author       Wan Bachtiar
-// @include      https://jira.*
+// @include      https?://jira.*
 // @updateURL    https://raw.githubusercontent.com/sindbach/md_to_jira/master/md_to_jira.user.js
+// @run-at context-menu
 // ==/UserScript==
 /* jshint -W097 */
 'use strict';
